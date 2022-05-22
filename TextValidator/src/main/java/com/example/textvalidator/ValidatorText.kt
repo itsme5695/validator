@@ -6,7 +6,7 @@ import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
 
-object MediaPlayerr {
+object ValidatorText {
     fun UserId(context: Context, message:String, editText: EditText){
         if (message.length >= 5) {
             if (message.isNotEmpty()){
