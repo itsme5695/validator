@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -32,6 +33,9 @@ android {
     buildFeatures{
         viewBinding true
     }
+    packagingOptions {
+        excludes -= "/META-INF/*.kotlin_module"
+    }
 }
 
 dependencies {
@@ -43,4 +47,20 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.example.mylibrary'
+                artifactId = 'validatorText'
+                version = '1.0.1'
+            }
+        }
+    }
 }
