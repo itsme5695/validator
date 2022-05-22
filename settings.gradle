@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "pdp-validator"
 include ':app'
 include ':TextValidator'
+include ':Library'
