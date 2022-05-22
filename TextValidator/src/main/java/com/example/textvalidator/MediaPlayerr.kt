@@ -5,7 +5,7 @@ import android.media.MediaPlayer
 import android.widget.Toast
 import java.net.URI
 
-object MediaPlayer:MediaPlayer.OnPreparedListener {
+object MediaPlayerr:MediaPlayer.OnPreparedListener {
     private var mediaPlayer: MediaPlayer?=null
 
 
